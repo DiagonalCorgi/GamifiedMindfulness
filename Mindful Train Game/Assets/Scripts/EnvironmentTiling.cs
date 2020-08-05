@@ -19,8 +19,8 @@ public class EnvironmentTiling : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tileSize = environmentTile.GetComponent<MeshFilter>().mesh.bounds.size.z;
         lastTile = Instantiate(environmentTile, new Vector3(0, 0, 0), Quaternion.identity);
+        tileSize = lastTile.GetComponentInChildren<MeshFilter>().mesh.bounds.size.z * lastTile.GetComponentInChildren<MeshFilter>().transform.localScale.z;
         lastTilePosition = lastTile.transform.position;
         endTile = Instantiate(environmentTile, new Vector3(lastTilePosition.x, lastTilePosition.y, lastTilePosition.z - tileSize), Quaternion.identity);
         currentTile = Instantiate(environmentTile, new Vector3(lastTilePosition.x, lastTilePosition.y, lastTilePosition.z + tileSize), Quaternion.identity);
