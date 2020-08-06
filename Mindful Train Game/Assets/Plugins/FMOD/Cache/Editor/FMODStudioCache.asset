@@ -1,23 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8957701572577869140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TrainMetronome/Speed
-  m_EditorClassIdentifier: 
-  Name: Speed
-  Min: 0
-  Max: 2
-  Default: 1
-  Exists: 1
---- !u!114 &-8886590467544468796
+--- !u!114 &-6877660240676992687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -27,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Master.bank
+  Path: ../FMOD Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637321029081733615
+  lastModified: 637323153218822745
   LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-8500656719514689600
+  FileSizes:
+  - Name: 
+    Value: 1054
+  Exists: 1
+--- !u!114 &-6352654555759319224
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,13 +34,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMOD Build/Desktop/Effects.bank
   SubDir: 
-  lastModified: 637320865690188520
+  lastModified: 637323153218716777
   LoadResult: 0
-  FileSizes:
-  - Name: 
-    Value: 470
-  Exists: 0
---- !u!114 &-8156964157075262034
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-5912504771014223240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,63 +52,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMOD Build/Desktop/Master.bank
   SubDir: 
-  lastModified: 637322231296127574
+  lastModified: 637323153218773543
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &-7884182482190178521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TrainMetronome/Tunnel
-  m_EditorClassIdentifier: 
-  Name: Tunnel
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-7839708745391140017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TrainMetronome/Tunnel
-  m_EditorClassIdentifier: 
-  Name: Tunnel
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &-7799114153098542698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Soundtrack.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Soundtrack.bank
-  SubDir: 
-  lastModified: 637322231296310926
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-7797397359324398936
+--- !u!114 &-5141284999363365275
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,11 +71,7 @@ MonoBehaviour:
   Path: event:/Soundtrack
   guid: 4714f8278afa0a428ca496ab34cd9634
   Banks:
-<<<<<<< HEAD
-  - {fileID: -1030279332711285504}
-=======
-  - {fileID: -7799114153098542698}
->>>>>>> 959bc8beafaf9c72dcdbd389ab97dd6caba6e9d0
+  - {fileID: 1252448052345946111}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -152,221 +79,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 45479
---- !u!114 &-7184206559682839816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TrainMetronome/Tunnel
-  m_EditorClassIdentifier: 
-  Name: Tunnel
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-7018712770809979987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637320986446561175
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-6931709172734525252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Soundtrack/Speed
-  m_EditorClassIdentifier: 
-  Name: Speed
-  Min: 0
-  Max: 2
-  Default: 1
-  Exists: 1
---- !u!114 &-6859412410884288096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637321554036669653
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-6697229450178693131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Effects.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Effects.bank
-  SubDir: 
-  lastModified: 637321679463523060
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-6156990239863930479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TrainMetronome/Speed
-  m_EditorClassIdentifier: 
-  Name: Speed
-  Min: 0
-  Max: 2
-  Default: 1
-  Exists: 0
---- !u!114 &-5909926262140050181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Effects.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Effects.bank
-  SubDir: 
-  lastModified: 637322235319230909
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-5816321595096522623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Soundtrack.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Soundtrack.bank
-  SubDir: 
-  lastModified: 637320865690118497
-  LoadResult: 0
-  FileSizes:
-  - Name: 
-    Value: 470
-  Exists: 0
---- !u!114 &-5667956766012687673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Soundtrack.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Soundtrack.bank
-  SubDir: 
-  lastModified: 637321554036729665
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-5620574828017937732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambient.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Ambient.bank
-  SubDir: 
-  lastModified: 637321029081173392
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-5557376789290788246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Effects.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Effects.bank
-  SubDir: 
-  lastModified: 637322183445518121
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-3752233880565791872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TrainMetronome/Speed
-  m_EditorClassIdentifier: 
-  Name: Speed
-  Min: 0
-  Max: 2
-  Default: 1
-  Exists: 0
---- !u!114 &-3676652440639990780
+--- !u!114 &-2154325479705937580
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -383,165 +96,7 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
---- !u!114 &-3604017667100225200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambient.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Ambient.bank
-  SubDir: 
-  lastModified: 637321679463363522
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-3277362770249300292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Effects.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Effects.bank
-  SubDir: 
-  lastModified: 637321029081653498
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-2466339464192940119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637322235319285975
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-2238070402673352367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637321029081733615
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-2065149071506732433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TrainMetronome/Tunnel
-  m_EditorClassIdentifier: 
-  Name: Tunnel
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-1494984825265481701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: Speed
-  m_EditorClassIdentifier: 
-  Name: Speed
-  Min: 0
-  Max: 2
-  Default: 1
-  Exists: 1
---- !u!114 &-1327858484495463048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Soundtrack/Speed
-  m_EditorClassIdentifier: 
-  Name: Speed
-  Min: 0
-  Max: 2
-  Default: 1
-  Exists: 1
---- !u!114 &-1030279332711285504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Soundtrack.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Soundtrack.bank
-  SubDir: 
-  lastModified: 637322235319470026
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-633994099270665867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TrainMetronome/Tunnel
-  m_EditorClassIdentifier: 
-  Name: Tunnel
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &-199039524518384968
+--- !u!114 &-1454612886933794984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -556,41 +111,15 @@ MonoBehaviour:
   Path: event:/TrainMetronome
   guid: 93a12b0d3aacb94aa9a6b65d5817bca8
   Banks:
-<<<<<<< HEAD
-  - {fileID: -5909926262140050181}
-=======
-  - {fileID: -105511315086632423}
->>>>>>> 959bc8beafaf9c72dcdbd389ab97dd6caba6e9d0
+  - {fileID: -6352654555759319224}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-<<<<<<< HEAD
-  - {fileID: 6356134538905757007}
-=======
-  - {fileID: -3676652440639990780}
->>>>>>> 959bc8beafaf9c72dcdbd389ab97dd6caba6e9d0
+  - {fileID: -2154325479705937580}
   MinDistance: 1
   MaxDistance: 20
   Length: 84021
---- !u!114 &-105511315086632423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Effects.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Effects.bank
-  SubDir: 
-  lastModified: 637322231296070402
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,40 +133,24 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 1979012306868798061}
-<<<<<<< HEAD
-  - {fileID: 621083188191999194}
-  - {fileID: -5909926262140050181}
-  - {fileID: -2466339464192940119}
-  - {fileID: -1030279332711285504}
-=======
-  - {fileID: 4602358221926108508}
-  - {fileID: -105511315086632423}
-  - {fileID: -8156964157075262034}
-  - {fileID: -7799114153098542698}
->>>>>>> 959bc8beafaf9c72dcdbd389ab97dd6caba6e9d0
+  - {fileID: -6877660240676992687}
+  - {fileID: 6532223725685344541}
+  - {fileID: -6352654555759319224}
+  - {fileID: -5912504771014223240}
+  - {fileID: 1252448052345946111}
   EditorEvents:
-  - {fileID: 365486968879701555}
-  - {fileID: -199039524518384968}
-  - {fileID: -7797397359324398936}
+  - {fileID: 4564854118195011325}
+  - {fileID: -1454612886933794984}
+  - {fileID: -5141284999363365275}
   EditorParameters:
-<<<<<<< HEAD
-  - {fileID: -1494984825265481701}
+  - {fileID: 8829659451533882273}
   MasterBanks:
-  - {fileID: -2466339464192940119}
+  - {fileID: -5912504771014223240}
   StringsBanks:
-  - {fileID: 1979012306868798061}
-  stringsBankWriteTime: 637322235319333713
-=======
-  - {fileID: 8802332143581642775}
-  MasterBanks:
-  - {fileID: -8156964157075262034}
-  StringsBanks:
-  - {fileID: 1979012306868798061}
-  stringsBankWriteTime: 637322231296177193
->>>>>>> 959bc8beafaf9c72dcdbd389ab97dd6caba6e9d0
+  - {fileID: -6877660240676992687}
+  stringsBankWriteTime: 637323153218822745
   cacheVersion: 3
---- !u!114 &181337204763485156
+--- !u!114 &1252448052345946111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -651,11 +164,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMOD Build/Desktop/Soundtrack.bank
   SubDir: 
-  lastModified: 637321029082233638
+  lastModified: 637323153218956436
   LoadResult: 0
   FileSizes: []
-  Exists: 0
---- !u!114 &365486968879701555
+  Exists: 1
+--- !u!114 &4564854118195011325
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -670,11 +183,7 @@ MonoBehaviour:
   Path: event:/Forest
   guid: 98b3b3d5229c0246aeab8fbc871952cb
   Banks:
-<<<<<<< HEAD
-  - {fileID: 621083188191999194}
-=======
-  - {fileID: 4602358221926108508}
->>>>>>> 959bc8beafaf9c72dcdbd389ab97dd6caba6e9d0
+  - {fileID: 6532223725685344541}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -682,7 +191,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 155065
---- !u!114 &621083188191999194
+--- !u!114 &6532223725685344541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -696,111 +205,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMOD Build/Desktop/Ambient.bank
   SubDir: 
-  lastModified: 637322235318918251
+  lastModified: 637323153218406893
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &1173347262271409265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambient.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Ambient.bank
-  SubDir: 
-  lastModified: 637321554036589631
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &1454637389396819994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637321679463563334
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &1979012306868798061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Master.strings.bank
-  SubDir: 
-<<<<<<< HEAD
-  lastModified: 637322235319333713
-=======
-  lastModified: 637322231296177193
->>>>>>> 959bc8beafaf9c72dcdbd389ab97dd6caba6e9d0
-  LoadResult: 0
-  FileSizes:
-  - Name: 
-    Value: 1054
-  Exists: 1
---- !u!114 &2878903013186637621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637320865689958561
-  LoadResult: 0
-  FileSizes:
-  - Name: 
-    Value: 1000
-  Exists: 0
---- !u!114 &3058167491711382069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../../MindfulnessFmod/Build/Desktop/Master.strings.bank
-  SubDir: 
-  lastModified: 637320862859842147
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 688
-  Exists: 0
---- !u!114 &4192631466850743290
+--- !u!114 &8829659451533882273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -816,380 +225,4 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 1
-  Exists: 0
---- !u!114 &4295990486415620487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Effects.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Effects.bank
-  SubDir: 
-  lastModified: 637321554036669653
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &4602358221926108508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambient.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Ambient.bank
-  SubDir: 
-  lastModified: 637322231295758433
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &4839877318732834935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Soundtrack.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Soundtrack.bank
-  SubDir: 
-  lastModified: 637321029082233638
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &4891589765061962463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambient.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Ambient.bank
-  SubDir: 
-  lastModified: 637321029081173392
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &5035321788849234925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambient.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Ambient.bank
-  SubDir: 
-  lastModified: 637320986425256394
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &5425656335304754388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Soundtrack.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Soundtrack.bank
-  SubDir: 
-  lastModified: 637321679463682654
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &5581272465871421178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambient.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Ambient.bank
-  SubDir: 
-  lastModified: 637320865690058482
-  LoadResult: 0
-  FileSizes:
-  - Name: 
-    Value: 470
-  Exists: 0
---- !u!114 &5837524329811681986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Soundtrack/Speed
-  m_EditorClassIdentifier: 
-  Name: Speed
-  Min: 0
-  Max: 2
-  Default: 1
-  Exists: 0
---- !u!114 &6021450268910721841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TrainMetronome/Speed
-  m_EditorClassIdentifier: 
-  Name: Speed
-  Min: 0
-  Max: 2
-  Default: 1
-  Exists: 0
---- !u!114 &6067983589249215265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637322183445598142
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
-<<<<<<< HEAD
---- !u!114 &6356134538905757007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TrainMetronome/Tunnel
-  m_EditorClassIdentifier: 
-  Name: Tunnel
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
-=======
->>>>>>> 959bc8beafaf9c72dcdbd389ab97dd6caba6e9d0
---- !u!114 &6572429318382174209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Soundtrack.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Soundtrack.bank
-  SubDir: 
-  lastModified: 637322183446838413
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &6706900994743513960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TrainMetronome/Speed
-  m_EditorClassIdentifier: 
-  Name: Speed
-  Min: 0
-  Max: 2
-  Default: 1
-  Exists: 1
---- !u!114 &6750299099659920199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../../MindfulnessFmod/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637320862859772132
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &6925227572840630113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TrainMetronome/Tunnel
-  m_EditorClassIdentifier: 
-  Name: Tunnel
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &7414313859564692608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambient.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Ambient.bank
-  SubDir: 
-  lastModified: 637322183444447873
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &7555203816841247421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Soundtrack/Speed
-  m_EditorClassIdentifier: 
-  Name: Speed
-  Min: 0
-  Max: 2
-  Default: 1
-  Exists: 0
---- !u!114 &7849494202883114784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Soundtrack.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Soundtrack.bank
-  SubDir: 
-  lastModified: 637320986458634463
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &8802332143581642775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: Speed
-  m_EditorClassIdentifier: 
-  Name: Speed
-  Min: 0
-  Max: 2
-  Default: 1
-  Exists: 1
---- !u!114 &9031481236181768314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Effects.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Effects.bank
-  SubDir: 
-  lastModified: 637320986446491157
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &9210077989543460864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Effects.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Build/Desktop/Effects.bank
-  SubDir: 
-  lastModified: 637321029081653498
-  LoadResult: 0
-  FileSizes: []
   Exists: 1

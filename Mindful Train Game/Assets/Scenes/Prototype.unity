@@ -132,6 +132,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train
       objectReference: {fileID: 0}
+    - target: {fileID: 6226212720346786637, guid: f1061874f5aa6a44db82535ce38502cd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.17117636
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226212720346786637, guid: f1061874f5aa6a44db82535ce38502cd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9852404
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226212720346786637, guid: f1061874f5aa6a44db82535ce38502cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 19.712002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226212720346786637, guid: f1061874f5aa6a44db82535ce38502cd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.03932
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226212720346786637, guid: f1061874f5aa6a44db82535ce38502cd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.07267
+      objectReference: {fileID: 0}
     - target: {fileID: 7841424957050916242, guid: f1061874f5aa6a44db82535ce38502cd,
         type: 3}
       propertyPath: m_LocalPosition.x
