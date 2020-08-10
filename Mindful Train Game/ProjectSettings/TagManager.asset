@@ -7,6 +7,8 @@ TagManager:
   - ColliderDetect
   - Right Hand
   - Left Hand
+  - TunnelEnterance
+  - TunnelExit
   layers:
   - Default
   - TransparentFX
