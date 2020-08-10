@@ -8,31 +8,34 @@ namespace ComplateProject
     {
         public ParticleSystem Cloud_Left;
         public ParticleSystem Cloud_Right;
-        public bool test;
+        public bool Left_Test;
+        public bool Right_Test;
 
         public void Update()
         {
-            if (test == true)
-                {
+            if (Left_Test == true)
+            {
                 Cloud_Call_Left();
+                Left_Test = false;
+            }
+            if (Right_Test == true)
+            {
+                Cloud_Call_Right();
+                Right_Test = false;
             }
         }
 
         public void Cloud_Call_Left()
         {
-            Cloud_Left.emission.SetBursts(new[]
-            {
-                new ParticleSystem.Burst(0f, 10)
-            });
-
-
-
-            //GetComponent<ParticleSystem>().emission.SetBursts(new[]
-            //{
-            //                        new ParticleSystem.Burst(1f, 10), //float_time, short_count
-            //                    });
+            Cloud_Left.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            Cloud_Left.Play();
         }
-}
 
+        public void Cloud_Call_Right()
+        {
+            Cloud_Right.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            Cloud_Right.Play();
+        }
+    }
 }
 
