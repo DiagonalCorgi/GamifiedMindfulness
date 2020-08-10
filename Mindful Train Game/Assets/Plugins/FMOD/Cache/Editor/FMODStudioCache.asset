@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/Forest
   guid: 98b3b3d5229c0246aeab8fbc871952cb
   Banks:
-  - {fileID: 6176762718989015259}
+  - {fileID: -5857755082220668311}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -23,6 +23,42 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 155065
+--- !u!114 &-7908843661450427889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Effects.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Build/Desktop/Effects.bank
+  SubDir: 
+  lastModified: 637326615609642693
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-5857755082220668311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambient.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Build/Desktop/Ambient.bank
+  SubDir: 
+  lastModified: 637326615609322383
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-5351632769558218794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,7 +76,7 @@ MonoBehaviour:
   lastModified: 637322622406158994
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3086201352692845031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,7 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMOD Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637322622406119102
+  lastModified: 637326615609940747
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -77,7 +113,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 1
-  Exists: 1
+  Exists: 0
 --- !u!114 &-654867664824541700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,15 +129,33 @@ MonoBehaviour:
   Path: event:/TrainMetronome
   guid: 93a12b0d3aacb94aa9a6b65d5817bca8
   Banks:
-  - {fileID: 8567361044251591300}
+  - {fileID: -7908843661450427889}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 6935142880367032653}
+  - {fileID: 4402841253433117396}
   MinDistance: 1
   MaxDistance: 20
   Length: 84021
+--- !u!114 &-447715126708731328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637326615609890972
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,21 +170,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -3086201352692845031}
-  - {fileID: 6176762718989015259}
-  - {fileID: 8567361044251591300}
-  - {fileID: 7724258670940778196}
-  - {fileID: -5351632769558218794}
+  - {fileID: -5857755082220668311}
+  - {fileID: -7908843661450427889}
+  - {fileID: -447715126708731328}
+  - {fileID: 5756789644327910821}
   EditorEvents:
   - {fileID: -8317373216682579969}
   - {fileID: -654867664824541700}
   - {fileID: 3314227670467205554}
   EditorParameters:
-  - {fileID: -1967288860504631132}
+  - {fileID: 5525082415271826654}
   MasterBanks:
-  - {fileID: 7724258670940778196}
+  - {fileID: -447715126708731328}
   StringsBanks:
   - {fileID: -3086201352692845031}
-  stringsBankWriteTime: 637322622406119102
+  stringsBankWriteTime: 637326615609940747
   cacheVersion: 3
 --- !u!114 &3314227670467205554
 MonoBehaviour:
@@ -147,7 +201,7 @@ MonoBehaviour:
   Path: event:/Soundtrack
   guid: 4714f8278afa0a428ca496ab34cd9634
   Banks:
-  - {fileID: -5351632769558218794}
+  - {fileID: 5756789644327910821}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -155,6 +209,58 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 45479
+--- !u!114 &4402841253433117396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TrainMetronome/Tunnel
+  m_EditorClassIdentifier: 
+  Name: Tunnel
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &5525082415271826654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: 0
+  Max: 2
+  Default: 1
+  Exists: 1
+--- !u!114 &5756789644327910821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Soundtrack.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Build/Desktop/Soundtrack.bank
+  SubDir: 
+  lastModified: 637326615610073664
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &6176762718989015259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,7 +278,7 @@ MonoBehaviour:
   lastModified: 637322622406039315
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &6935142880367032653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +295,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &7724258670940778196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,7 +313,7 @@ MonoBehaviour:
   lastModified: 637322622406109129
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &8567361044251591300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,4 +331,4 @@ MonoBehaviour:
   lastModified: 637322622406109129
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
