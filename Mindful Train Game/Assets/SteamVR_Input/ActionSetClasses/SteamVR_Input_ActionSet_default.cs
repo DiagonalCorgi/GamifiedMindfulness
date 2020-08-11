@@ -14,14 +14,14 @@ namespace Valve.VR
     using UnityEngine;
     
     
-    public class SteamVR_Input_ActionSet_mindfulness_player : Valve.VR.SteamVR_ActionSet
+    public class SteamVR_Input_ActionSet_default : Valve.VR.SteamVR_ActionSet
     {
         
         public virtual SteamVR_Action_Boolean InteractUI
         {
             get
             {
-                return SteamVR_Actions.mindfulness_player_InteractUI;
+                return SteamVR_Actions.default_InteractUI;
             }
         }
         
@@ -29,7 +29,7 @@ namespace Valve.VR
         {
             get
             {
-                return SteamVR_Actions.mindfulness_player_Teleport;
+                return SteamVR_Actions.default_Teleport;
             }
         }
         
@@ -37,7 +37,7 @@ namespace Valve.VR
         {
             get
             {
-                return SteamVR_Actions.mindfulness_player_GrabPinch;
+                return SteamVR_Actions.default_GrabPinch;
             }
         }
         
@@ -45,7 +45,7 @@ namespace Valve.VR
         {
             get
             {
-                return SteamVR_Actions.mindfulness_player_GrabGrip;
+                return SteamVR_Actions.default_GrabGrip;
             }
         }
         
@@ -53,7 +53,7 @@ namespace Valve.VR
         {
             get
             {
-                return SteamVR_Actions.mindfulness_player_Pose;
+                return SteamVR_Actions.default_Pose;
             }
         }
         
@@ -61,7 +61,7 @@ namespace Valve.VR
         {
             get
             {
-                return SteamVR_Actions.mindfulness_player_SkeletonLeftHand;
+                return SteamVR_Actions.default_SkeletonLeftHand;
             }
         }
         
@@ -69,7 +69,7 @@ namespace Valve.VR
         {
             get
             {
-                return SteamVR_Actions.mindfulness_player_SkeletonRightHand;
+                return SteamVR_Actions.default_SkeletonRightHand;
             }
         }
         
@@ -77,7 +77,7 @@ namespace Valve.VR
         {
             get
             {
-                return SteamVR_Actions.mindfulness_player_Squeeze;
+                return SteamVR_Actions.default_Squeeze;
             }
         }
         
@@ -85,7 +85,7 @@ namespace Valve.VR
         {
             get
             {
-                return SteamVR_Actions.mindfulness_player_HeadsetOnHead;
+                return SteamVR_Actions.default_HeadsetOnHead;
             }
         }
         
@@ -93,7 +93,7 @@ namespace Valve.VR
         {
             get
             {
-                return SteamVR_Actions.mindfulness_player_SnapTurnLeft;
+                return SteamVR_Actions.default_SnapTurnLeft;
             }
         }
         
@@ -101,7 +101,7 @@ namespace Valve.VR
         {
             get
             {
-                return SteamVR_Actions.mindfulness_player_SnapTurnRight;
+                return SteamVR_Actions.default_SnapTurnRight;
             }
         }
         
@@ -109,7 +109,7 @@ namespace Valve.VR
         {
             get
             {
-                return SteamVR_Actions.mindfulness_player_Haptic;
+                return SteamVR_Actions.default_Haptic;
             }
         }
     }
