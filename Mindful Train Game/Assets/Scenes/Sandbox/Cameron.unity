@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSpeed: 1
+  rhythmIndex: 0
 --- !u!4 &1416390005
 Transform:
   m_ObjectHideFlags: 0
