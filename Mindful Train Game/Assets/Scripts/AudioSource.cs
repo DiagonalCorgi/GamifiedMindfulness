@@ -27,7 +27,9 @@ public class AudioSource : MonoBehaviour
     private float fmodTimeDelta;
 
     private int beatTimeout;
-    private float lastBeat;
+    private float lastBeatHit;
+    private float currentLeftBeat;
+    private float currentRightBeat;
 
     [Range(0F, 6F)]
     public float noteDelay = 0;
@@ -155,12 +157,12 @@ public class AudioSource : MonoBehaviour
             {
                 float beat = Mathf.Repeat(float.Parse(lhArray[i]), 4);
 
-                if (beat != lastBeat && (Mathf.Abs(time - beat) < beatTolerance || 
+                if (beat != lastBeatHit && (Mathf.Abs(time - beat) < beatTolerance || 
                     (time < beatTolerance && beat >= 4 - beatTolerance) || 
                     (time > 4 - beatTolerance && beat <= beatTolerance)))
                 {
                     Debug.Log("Hit Left Beat, Time: "+ time +", Beat: "+ beat);
-                    lastBeat = beat;
+                    lastBeatHit = beat;
                     return true;
                 }
             }
@@ -172,13 +174,13 @@ public class AudioSource : MonoBehaviour
             {
                 float beat = Mathf.Repeat(float.Parse(rhArray[i]), 4);
 
-                if (beat != lastBeat && 
+                if (beat != lastBeatHit && 
                     (Mathf.Abs(time - beat) < beatTolerance || 
                     (time < beatTolerance && beat >= 4 - beatTolerance) || 
                     (time > 4 - beatTolerance && beat <= beatTolerance)))
                 {
                     Debug.Log("Hit Right Beat, Time: " + time + ", Beat: " + beat);
-                    lastBeat = beat;
+                    lastBeatHit = beat;
                     return true;
                 }
             }

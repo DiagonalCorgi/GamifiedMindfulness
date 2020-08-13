@@ -214,7 +214,7 @@ MonoBehaviour:
     needsReinit: 0
   audioManager: {fileID: 1221710021}
   vibrationOffset: 0.1
-  vibrationDuration: 0.12
+  vibrationDuration: 1
   vibrationFrequency: 150
   vibrationAmplitude: 19
 --- !u!4 &527081841
@@ -563,17 +563,17 @@ MonoBehaviour:
   rhythmIndex: 0
   beatTolerance: 0.25
   timelinePosition: 0
-  noteDelay: 5.1
+  noteDelay: 3.1
   leftHandRhythms:
   - 0,2
-  - 0,1,2,3
-  - 0,1,2.75
-  - 
+  - 0,2
+  - 0,1,2,2.75
+  - 0,3
   rightHandRhythms:
   - 1,3
-  - 0,2
-  - 1,2,3
-  - 
+  - 0,1,2,3
+  - 1,3
+  - 0.5,1,1.5,2.5
 --- !u!4 &1221710022
 Transform:
   m_ObjectHideFlags: 0
