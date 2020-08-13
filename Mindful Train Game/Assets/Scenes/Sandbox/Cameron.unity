@@ -249,6 +249,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSpeed: 1
   rhythmIndex: 0
+  timelinePosition: 0
+  noteDelay: 0
+  leftHandRhythms:
+  - 0,2,3
+  - 
+  - 
+  - 
+  rightHandRhythms:
+  - 1,2.5,3.5
+  - 
+  - 
+  - 
 --- !u!4 &1416390005
 Transform:
   m_ObjectHideFlags: 0
