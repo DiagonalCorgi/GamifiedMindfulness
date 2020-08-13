@@ -13,8 +13,8 @@ public class TrainMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.Translate(0f, 0f, trainSpeed * Time.deltaTime);
+        transform.Translate(0f, 0f, trainSpeed * Time.fixedDeltaTime);
     }
 }

@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.mindfultraingame.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "P:\\My Documents\\Gamified Mindfulness\\gamified-mindfulness\\Mindful Train Game\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "F:\\Users\\Cameron\\Shared Home\\UC\\PROD222\\Gamified Mindfulness\\gamified-mindfulness\\Mindful Train Game\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "Mindful Train Game [Testing]"

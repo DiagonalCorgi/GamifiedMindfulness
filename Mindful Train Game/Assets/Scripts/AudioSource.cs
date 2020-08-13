@@ -14,6 +14,9 @@ public class AudioSource : MonoBehaviour
 
     public int rhythmIndex = 1;
 
+    [Range(0F, 1F)]
+    public float beatTolerance = 0.25f;
+
     //Rhythms syncing
     public int timelinePosition;
     private int beatTimeout;
@@ -48,6 +51,7 @@ public class AudioSource : MonoBehaviour
         beatTimeout = Mathf.Max(beatTimeout, 0);
 
         float newTime = Mathf.Repeat((float)newTimelinePos / 1000, 4);
+        float newOffsetTime = Mathf.Repeat((float)newTimelinePos / 1000 + noteDelay, 4);
 
 
         if (leftHandRhythms[rhythmIndex] != "" && rightHandRhythms[rhythmIndex] != "")
@@ -62,21 +66,23 @@ public class AudioSource : MonoBehaviour
             //releasing beat puffs
             if (beatTimeout == 0)
             {
-                if (newTime >= lhNextBeat && newTime <= lhNextBeat + 0.1)
+                if (newOffsetTime >= lhNextBeat && newOffsetTime <= lhNextBeat + 0.1)
                 {
                     beatTimeout = 100;
 
                     //play release steam puff
                     Debug.Log("play left");
+                    emitLeft();
                     lhIndex++;
                 }
 
-                if (newTime >= rhNextBeat && newTime <= rhNextBeat + 0.1)
+                if (newOffsetTime >= rhNextBeat && newOffsetTime <= rhNextBeat + 0.1)
                 {
                     beatTimeout = 100;
 
                     //play release steam puff
                     Debug.Log("play right");
+                    emitRight();
                     rhIndex++;
                 }
             }
@@ -86,4 +92,51 @@ public class AudioSource : MonoBehaviour
     }
 
 
+    public void emitLeft()
+    {
+
+    }
+
+    public void emitRight()
+    {
+
+    }
+
+    public bool checkBeatHit(bool hand)
+    {
+        float time = Mathf.Repeat((float)timelinePosition / 1000, 4);
+
+        //parse list from string
+        string[] lhArray = leftHandRhythms[rhythmIndex].Split(',');
+        string[] rhArray = rightHandRhythms[rhythmIndex].Split(',');
+
+        if (!hand)
+        {
+            //check left hand hit a beat
+            for (int i = 0; i < lhArray.Length; i++)
+            {
+                float beat = Mathf.Repeat(float.Parse(lhArray[i]), 4);
+
+                if (time >= beat - beatTolerance && time <= beat + beatTolerance)
+                {
+                    return true;
+                }
+            }
+        }
+        else
+        {
+            //check right hand hit a beat
+            for (int i = 0; i < rhArray.Length; i++)
+            {
+                float beat = Mathf.Repeat(float.Parse(rhArray[i]), 4);
+
+                if (time >= beat - beatTolerance && time <= beat + beatTolerance)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
 }
