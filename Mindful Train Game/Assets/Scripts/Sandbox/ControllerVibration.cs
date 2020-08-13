@@ -32,6 +32,7 @@ public class ControllerVibration : MonoBehaviour
     
     void Update()
     {
+
         //activating controller vibration
         vibrationTimeout -= (int)(Time.deltaTime * 1000);
         vibrationTimeout = Mathf.Max(vibrationTimeout, 0);
@@ -40,20 +41,20 @@ public class ControllerVibration : MonoBehaviour
 
         if (vibrationTimeout == 0)
         {
-            if (vibrationClock >= 1 && vibrationClock <= 1.05)
-            {
-                vibrationTimeout = 100;
-
-                //play vibration
-                LeftHaptics();
-            }
-
-            if (vibrationClock >= 0 && vibrationClock <= 0.05)
+            if (vibrationClock >= 1 && vibrationClock <= 1.08)
             {
                 vibrationTimeout = 100;
 
                 //play vibration
                 RightHaptics();
+            }
+
+            if (vibrationClock >= 0 && vibrationClock <= 0.08)
+            {
+                vibrationTimeout = 100;
+
+                //play vibration
+                LeftHaptics();
             }
         }
     }

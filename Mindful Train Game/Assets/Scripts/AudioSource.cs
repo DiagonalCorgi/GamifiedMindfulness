@@ -8,9 +8,12 @@ public class AudioSource : MonoBehaviour
 
     public EventInstance trainMetronome;
     public EventInstance rhythm;
+    public CloudCall trainSteamController;
+    public GameObject player;
 
     [Range(0.0F, 2.0F)]
     public float audioSpeed = 1.5f;
+
 
     public int rhythmIndex = 1;
 
@@ -19,8 +22,14 @@ public class AudioSource : MonoBehaviour
 
     //Rhythms syncing
     public int timelinePosition;
-    private int beatTimeout;
+    private float realSpeed;
+    private float timeDelta;
+    private float fmodTimeDelta;
 
+    private int beatTimeout;
+    private float lastBeat;
+
+    [Range(0F, 6F)]
     public float noteDelay = 0;
 
     public List<string> leftHandRhythms;
@@ -40,18 +49,37 @@ public class AudioSource : MonoBehaviour
 
     void Update()
     {
+        transform.position = player.transform.position;
+
         SoundM.SetSoundParameter("Speed", audioSpeed);
         SoundM.SetSoundParameter("RhythmIndex", (float)rhythmIndex);
 
         int newTimelinePos;
         rhythm.getTimelinePosition(out newTimelinePos);
 
+        /*fmodTimeDelta += (float)(newTimelinePos - timelinePosition) / 1000;
+        timeDelta += Time.deltaTime;
+        if (fmodTimeDelta < 0)
+        {
+            timeDelta = 0;
+            fmodTimeDelta = 0;
+        }
+        if (fmodTimeDelta > 2)
+        {
+
+            //Debug.Log(timeDelta + " , " + fmodTimeDelta);
+
+            realSpeed = (realSpeed + timeDelta / fmodTimeDelta) /2;
+            timeDelta = 0;
+            fmodTimeDelta = 0;
+            Debug.Log(realSpeed);
+        }*/
 
         beatTimeout -= (int)(Time.deltaTime * 1000);
         beatTimeout = Mathf.Max(beatTimeout, 0);
 
         float newTime = Mathf.Repeat((float)newTimelinePos / 1000, 4);
-        float newOffsetTime = Mathf.Repeat((float)newTimelinePos / 1000 + noteDelay, 4);
+        float newOffsetTime = Mathf.Repeat((float)newTimelinePos / 1000 + (noteDelay /** realSpeed*/), 4);
 
 
         if (leftHandRhythms[rhythmIndex] != "" && rightHandRhythms[rhythmIndex] != "")
@@ -71,7 +99,6 @@ public class AudioSource : MonoBehaviour
                     beatTimeout = 100;
 
                     //play release steam puff
-                    Debug.Log("play left");
                     emitLeft();
                     lhIndex++;
                 }
@@ -81,9 +108,20 @@ public class AudioSource : MonoBehaviour
                     beatTimeout = 100;
 
                     //play release steam puff
-                    Debug.Log("play right");
                     emitRight();
                     rhIndex++;
+                }
+            }
+
+            if (Input.GetButtonDown("Fire1"))
+            {
+                if (checkBeatHit(0))
+                {
+                    //Debug.Log("Hit Left Beat");
+                }
+                else
+                {
+                    //Debug.Log("Missed Left Beat");
                 }
             }
         }
@@ -94,15 +132,15 @@ public class AudioSource : MonoBehaviour
 
     public void emitLeft()
     {
-
+        trainSteamController.Cloud_Call_Left();
     }
 
     public void emitRight()
     {
-
+        trainSteamController.Cloud_Call_Right();
     }
 
-    public bool checkBeatHit(bool hand)
+    public bool checkBeatHit(int hand)
     {
         float time = Mathf.Repeat((float)timelinePosition / 1000, 4);
 
@@ -110,15 +148,19 @@ public class AudioSource : MonoBehaviour
         string[] lhArray = leftHandRhythms[rhythmIndex].Split(',');
         string[] rhArray = rightHandRhythms[rhythmIndex].Split(',');
 
-        if (!hand)
+        if (hand == 0)
         {
             //check left hand hit a beat
             for (int i = 0; i < lhArray.Length; i++)
             {
                 float beat = Mathf.Repeat(float.Parse(lhArray[i]), 4);
 
-                if (time >= beat - beatTolerance && time <= beat + beatTolerance)
+                if (beat != lastBeat && (Mathf.Abs(time - beat) < beatTolerance || 
+                    (time < beatTolerance && beat >= 4 - beatTolerance) || 
+                    (time > 4 - beatTolerance && beat <= beatTolerance)))
                 {
+                    Debug.Log("Hit Left Beat, Time: "+ time +", Beat: "+ beat);
+                    lastBeat = beat;
                     return true;
                 }
             }
@@ -130,13 +172,19 @@ public class AudioSource : MonoBehaviour
             {
                 float beat = Mathf.Repeat(float.Parse(rhArray[i]), 4);
 
-                if (time >= beat - beatTolerance && time <= beat + beatTolerance)
+                if (beat != lastBeat && 
+                    (Mathf.Abs(time - beat) < beatTolerance || 
+                    (time < beatTolerance && beat >= 4 - beatTolerance) || 
+                    (time > 4 - beatTolerance && beat <= beatTolerance)))
                 {
+                    Debug.Log("Hit Right Beat, Time: " + time + ", Beat: " + beat);
+                    lastBeat = beat;
                     return true;
                 }
             }
         }
 
+        Debug.Log("Missed Beat, Time: " + time);
         return false;
     }
 }
