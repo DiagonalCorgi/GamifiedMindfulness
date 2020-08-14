@@ -152,7 +152,6 @@ public class AudioSource : MonoBehaviour
                         //check if player has hit the current beat
                         if (leftBeatIgnore != currentLeftBeat)
                         {
-                            playerManager.consecutiveMisses++;
                             //leftBeatIgnore = currentLeftBeat;
                             Debug.Log("Missed Beat, Time: " + newTime);
                         }
@@ -186,7 +185,6 @@ public class AudioSource : MonoBehaviour
                         //check if player has hit the current beat
                         if (rightBeatIgnore != currentRightBeat)
                         {
-                            playerManager.consecutiveMisses++;
                             //rightBeatIgnore = currentRightBeat;
                             Debug.Log("Missed Beat, Time: " + newTime);
                         }
