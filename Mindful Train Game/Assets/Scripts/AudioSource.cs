@@ -10,6 +10,7 @@ public class AudioSource : MonoBehaviour
     public EventInstance rhythm;
     public CloudCall trainSteamController;
     public GameObject player;
+    public PlayerManager playerManager;
 
     [Range(0.0F, 2.0F)]
     public float audioSpeed = 1.5f;
@@ -27,7 +28,8 @@ public class AudioSource : MonoBehaviour
     private float fmodTimeDelta;
 
     private int beatTimeout;
-    private float lastBeatHit;
+    private float leftBeatIgnore;
+    private float rightBeatIgnore;
     private float currentLeftBeat;
     private float currentRightBeat;
 
@@ -115,7 +117,7 @@ public class AudioSource : MonoBehaviour
                 }
             }
 
-            if (Input.GetButtonDown("Fire1"))
+            /*if (Input.GetButtonDown("Fire1"))
             {
                 if (checkBeatHit(0))
                 {
@@ -125,10 +127,79 @@ public class AudioSource : MonoBehaviour
                 {
                     //Debug.Log("Missed Left Beat");
                 }
+            }*/
+
+            //check which beats are in range to be hit by left hand
+            for (int i = 0; i < lhArray.Length; i++)
+            {
+                float beat = Mathf.Repeat(float.Parse(lhArray[i]), 4);
+
+                if (Mathf.Abs(newTime - beat) < beatTolerance ||
+                    (newTime < beatTolerance && beat >= 4 - beatTolerance) ||
+                    (newTime > 4 - beatTolerance && beat <= beatTolerance))
+                {
+                    if (beat != currentLeftBeat)
+                    {
+                        //new beat
+                        currentLeftBeat = beat;
+                    }
+                }
+                else
+                {
+                    //no beat
+                    if (beat == currentLeftBeat)
+                    {
+                        //check if player has hit the current beat
+                        if (leftBeatIgnore != currentLeftBeat)
+                        {
+                            playerManager.consecutiveMisses++;
+                            //leftBeatIgnore = currentLeftBeat;
+                            Debug.Log("Missed Beat, Time: " + newTime);
+                        }
+
+                        currentLeftBeat = -1;
+                    }
+                }
+            }
+
+            //check which beats are in range to be hit by right hand
+            for (int i = 0; i < rhArray.Length; i++)
+            {
+                float beat = Mathf.Repeat(float.Parse(rhArray[i]), 4);
+
+                if (Mathf.Abs(newTime - beat) < beatTolerance ||
+                    (newTime < beatTolerance && beat >= 4 - beatTolerance) ||
+                    (newTime > 4 - beatTolerance && beat <= beatTolerance))
+                {
+                    if (beat != currentRightBeat)
+                    {
+                        //new beat
+                        currentRightBeat = beat;
+                    }
+                }
+                else
+                {
+                    //no beat
+                    if (beat == currentRightBeat)
+                    {
+
+                        //check if player has hit the current beat
+                        if (rightBeatIgnore != currentRightBeat)
+                        {
+                            playerManager.consecutiveMisses++;
+                            //rightBeatIgnore = currentRightBeat;
+                            Debug.Log("Missed Beat, Time: " + newTime);
+                        }
+
+                        currentRightBeat = -1;
+                    }
+                }
             }
         }
 
         timelinePosition = newTimelinePos;
+
+
     }
 
 
@@ -153,16 +224,12 @@ public class AudioSource : MonoBehaviour
         if (hand == 0)
         {
             //check left hand hit a beat
-            for (int i = 0; i < lhArray.Length; i++)
+            if (currentLeftBeat != -1)
             {
-                float beat = Mathf.Repeat(float.Parse(lhArray[i]), 4);
-
-                if (beat != lastBeatHit && (Mathf.Abs(time - beat) < beatTolerance || 
-                    (time < beatTolerance && beat >= 4 - beatTolerance) || 
-                    (time > 4 - beatTolerance && beat <= beatTolerance)))
+                if (currentLeftBeat != leftBeatIgnore)
                 {
-                    Debug.Log("Hit Left Beat, Time: "+ time +", Beat: "+ beat);
-                    lastBeatHit = beat;
+                    Debug.Log("Hit Left Beat, Time: " + time + ", Beat: " + currentLeftBeat);
+                    leftBeatIgnore = currentLeftBeat;
                     return true;
                 }
             }
@@ -170,23 +237,18 @@ public class AudioSource : MonoBehaviour
         else
         {
             //check right hand hit a beat
-            for (int i = 0; i < rhArray.Length; i++)
+            if (currentRightBeat != -1)
             {
-                float beat = Mathf.Repeat(float.Parse(rhArray[i]), 4);
-
-                if (beat != lastBeatHit && 
-                    (Mathf.Abs(time - beat) < beatTolerance || 
-                    (time < beatTolerance && beat >= 4 - beatTolerance) || 
-                    (time > 4 - beatTolerance && beat <= beatTolerance)))
+                if (currentRightBeat != rightBeatIgnore)
                 {
-                    Debug.Log("Hit Right Beat, Time: " + time + ", Beat: " + beat);
-                    lastBeatHit = beat;
+                    Debug.Log("Hit Right Beat, Time: " + time + ", Beat: " + currentRightBeat);
+                    rightBeatIgnore = currentRightBeat;
                     return true;
                 }
             }
         }
 
-        Debug.Log("Missed Beat, Time: " + time);
+
         return false;
     }
 }

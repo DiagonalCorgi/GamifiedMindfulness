@@ -12,6 +12,20 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject[] handObject;
 
+    //Rhthym Acuracy Tracking
+    public int missAllowance;
+    public int consecutiveMisses;
+
+    public int streakCounter;
+    public float focus;
+
+    [Range(0F, 60F)]
+    public float streakLength = 10;
+    public float streakTimer = -1;
+
+    public GameObject fallbackLeftHand;
+    public GameObject fallbackRightHand;
+
     void Start()
     {
         poof = SoundM.CreateSoundInstance("Poof");
@@ -35,6 +49,22 @@ public class PlayerManager : MonoBehaviour
                 handObject[hand].GetComponent<Collider>().enabled = false;
             }
         }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            fallbackLeftHand.SetActive(true);
+            //Hit(0);
+
+            Invoke("DisableFallbackHands", 0.2f);
+        }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            fallbackRightHand.SetActive(true);
+            //Hit(1);
+
+            Invoke("DisableFallbackHands", 0.2f);
+        }
     }
 
     public void Hit(int hand)
@@ -43,5 +73,11 @@ public class PlayerManager : MonoBehaviour
         {
             SoundM.PlaySound(poof, handObject[hand].transform.position);
         }
+    }
+
+    public void DisableFallbackHands()
+    {
+        fallbackLeftHand.SetActive(false);
+        fallbackRightHand.SetActive(false);
     }
 }

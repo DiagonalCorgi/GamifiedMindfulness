@@ -81,7 +81,10 @@ public class ControllerVibration : MonoBehaviour
     // The part that actually triggers the haptic to happen
     private void Haptics(float duration, float frequency, float amplitude, SteamVR_Input_Sources source)
     {
-        hapticAction.Execute(0, duration, frequency, amplitude, source);
+        if (hapticAction.active)
+        {
+            hapticAction.Execute(0, duration, frequency, amplitude, source);
+        }
 
         // debug
         print("Haptic " + source.ToString());
