@@ -35,6 +35,12 @@ public class CloudCall : MonoBehaviour
         Cloud_Right.Play();
     }
 
+    public void Cloud_Stop()
+    {
+        Cloud_Right.Pause();
+        Cloud_Left.Pause();
+    }
+
 
 }
 

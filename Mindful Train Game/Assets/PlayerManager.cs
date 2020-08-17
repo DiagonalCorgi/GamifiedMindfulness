@@ -72,7 +72,13 @@ public class PlayerManager : MonoBehaviour
         if (audioManager.checkBeatHit(hand))
         {
             SoundM.PlaySound(poof, handObject[hand].transform.position);
+            //streakCounter++;
+            //Debug.Log("hit streak: " + streakCounter);
         }
+        /*else if (!audioManager.checkBeatHit(hand))
+        {
+            streakCounter == 0;
+        }*/
     }
 
     public void DisableFallbackHands()

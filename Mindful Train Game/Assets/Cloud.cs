@@ -6,6 +6,7 @@ public class Cloud : MonoBehaviour
 {
     public PlayerManager player;
     public int hand;
+    public CloudCall cloudCall;
 
     private void Start()
     {
@@ -14,6 +15,15 @@ public class Cloud : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
+  
         player.Hit(hand);
+        /**
+         * 
+         * if (player.streakCounter > player.streakLength)
+        {
+            cloudCall.Cloud_Left.Clear();
+            cloudCall.Cloud_Right.Clear();
+        }        
+         */
     }
 }
