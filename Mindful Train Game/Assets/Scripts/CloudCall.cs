@@ -9,6 +9,8 @@ public class CloudCall : MonoBehaviour
     public bool Left_Test;
     public bool Right_Test;
 
+    public float steamAlpha;
+
     public void Update()
     {
         if (Left_Test == true)
@@ -21,6 +23,9 @@ public class CloudCall : MonoBehaviour
             Cloud_Call_Right();
             Right_Test = false;
         }
+
+        Cloud_Left.GetComponent<Cloud>().alpha = steamAlpha;
+        Cloud_Right.GetComponent<Cloud>().alpha = steamAlpha;
     }
 
     public void Cloud_Call_Left()

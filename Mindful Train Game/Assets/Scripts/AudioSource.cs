@@ -154,6 +154,7 @@ public class AudioSource : MonoBehaviour
                         {
                             //leftBeatIgnore = currentLeftBeat;
                             Debug.Log("Missed Beat, Time: " + newTime);
+                            playerManager.consecutiveMisses++;
                         }
 
                         currentLeftBeat = -1;
@@ -187,6 +188,7 @@ public class AudioSource : MonoBehaviour
                         {
                             //rightBeatIgnore = currentRightBeat;
                             Debug.Log("Missed Beat, Time: " + newTime);
+                            playerManager.consecutiveMisses++;
                         }
 
                         currentRightBeat = -1;
@@ -198,6 +200,8 @@ public class AudioSource : MonoBehaviour
         timelinePosition = newTimelinePos;
 
 
+        //adjust focus parameter
+        SoundM.SetSoundParameter("Focus", playerManager.focus);
     }
 
 

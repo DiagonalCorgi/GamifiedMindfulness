@@ -158,6 +158,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 3316301690518755739}
   hand: 0
+  cloudCall: {fileID: 0}
+  alpha: 1
+  alphaPrev: 1
 --- !u!1 &527081838
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +295,11 @@ PrefabInstance:
         type: 3}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140225909208163625, guid: f1061874f5aa6a44db82535ce38502cd,
+        type: 3}
+      propertyPath: looping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6226212720346786632, guid: f1061874f5aa6a44db82535ce38502cd,
         type: 3}
@@ -468,6 +476,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 3316301690518755739}
   hand: 1
+  cloudCall: {fileID: 0}
+  alpha: 1
+  alphaPrev: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,11 +781,13 @@ MonoBehaviour:
   - 0,2
   - 0,1,2,2.75
   - 0,3
+  - 
   rightHandRhythms:
   - 1,3
   - 0,1,2,3
   - 1,3
   - 0.5,1,1.5,2.5
+  - 
 --- !u!4 &1221710022
 Transform:
   m_ObjectHideFlags: 0
@@ -1161,7 +1174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3316301690518755738}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 33.15, z: -17.76}
+  m_LocalPosition: {x: 0, y: 33.339, z: -17.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3316301690518632006}
@@ -1542,14 +1555,18 @@ MonoBehaviour:
   handObject:
   - {fileID: 3316301690518785878}
   - {fileID: 3316301690518769508}
-  missAllowance: 0
+  missAllowance: 3
   consecutiveMisses: 0
   streakCounter: 0
   focus: 0
-  streakLength: 10
+  steamAlpha: 0.243
+  streakLength: 50
   streakTimer: -1
+  transitionTimerLength: 5
+  transitionTimer: 5
   fallbackLeftHand: {fileID: 638375772}
   fallbackRightHand: {fileID: 728641962}
+  trainSteamController: {fileID: 420372753}
 --- !u!1 &3316301690518757364
 GameObject:
   m_ObjectHideFlags: 0
