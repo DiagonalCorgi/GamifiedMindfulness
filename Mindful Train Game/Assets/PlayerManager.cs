@@ -92,7 +92,7 @@ public class PlayerManager : MonoBehaviour
         SoundM.UpdateSoundPos(transition, transform.position);
 
         //increase focus based on streak timer
-        if (streakTimer >= 0 && consecutiveMisses <= 2)
+        if (streakTimer >= 0 && consecutiveMisses == 0)
         {
             focus = Mathf.Clamp(1 / streakLength * (streakLength - streakTimer) * 1.5f, 0, 1);
         }
@@ -151,6 +151,8 @@ public class PlayerManager : MonoBehaviour
             SoundM.PlaySound(poof, handObject[hand].transform.position);
             streakCounter++;
             //Debug.Log("hit streak: " + streakCounter);
+
+            handObject[hand].GetComponentInChildren<ParticleSystem>().Play();
         }
         /*else if (!audioManager.checkBeatHit(hand))
         {

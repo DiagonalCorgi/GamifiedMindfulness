@@ -46,13 +46,12 @@ public class Cloud : MonoBehaviour
     {
   
         player.Hit(hand);
-        /**
-         * 
-         * if (player.streakCounter > player.streakLength)
+
+        if (player.transitionTimer > player.transitionTimerLength/2 && alpha <= 0.01 && GetComponent<ParticleSystem>().particleCount > 0)
         {
             cloudCall.Cloud_Left.Clear();
             cloudCall.Cloud_Right.Clear();
         }        
-         */
+         
     }
 }
